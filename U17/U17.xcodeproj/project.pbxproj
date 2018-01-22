@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4EE6721E2015B8FC00A2234D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6721D2015B8FC00A2234D /* AppDelegate.swift */; };
-		4EE672202015B8FC00A2234D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6721F2015B8FC00A2234D /* ViewController.swift */; };
 		4EE672252015B8FC00A2234D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EE672242015B8FC00A2234D /* Assets.xcassets */; };
 		4EE672282015B8FC00A2234D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE672262015B8FC00A2234D /* LaunchScreen.storyboard */; };
+		4EE6725A2015C33E00A2234D /* UTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE672592015C33E00A2234D /* UTabBarController.swift */; };
+		4EE6725C2015CD6100A2234D /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6725B2015CD6100A2234D /* Global.swift */; };
+		4EE672602015E55500A2234D /* UNoticeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6725F2015E55500A2234D /* UNoticeBar.swift */; };
 		EFC9A56F7375C0AF8D0A8941 /* Pods_U17.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542158DAD00D3DE084E4D1C9 /* Pods_U17.framework */; };
 /* End PBXBuildFile section */
 
@@ -18,10 +20,13 @@
 		12DAD9F6608D1A1283101776 /* Pods-U17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-U17.release.xcconfig"; path = "Pods/Target Support Files/Pods-U17/Pods-U17.release.xcconfig"; sourceTree = "<group>"; };
 		4EE6721A2015B8FC00A2234D /* U17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = U17.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE6721D2015B8FC00A2234D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4EE6721F2015B8FC00A2234D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EE672242015B8FC00A2234D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EE672272015B8FC00A2234D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EE672292015B8FC00A2234D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EE672592015C33E00A2234D /* UTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTabBarController.swift; sourceTree = "<group>"; };
+		4EE6725B2015CD6100A2234D /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		4EE6725E2015DA0E00A2234D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EE6725F2015E55500A2234D /* UNoticeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNoticeBar.swift; sourceTree = "<group>"; };
 		542158DAD00D3DE084E4D1C9 /* Pods_U17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_U17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B420187DDE59D64F9208D696 /* Pods-U17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-U17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-U17/Pods-U17.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +90,7 @@
 				4EE6723C2015BCDA00A2234D /* CollectionViewLayout */,
 				4EE6723D2015BCDA00A2234D /* EmptyDataSet */,
 				4EE6723E2015BCDA00A2234D /* HairPowder */,
-				4EE6723F2015BCDA00A2234D /* NoticeBar */,
+				4EE6723F2015BCDA00A2234D /* NoticeBar(通知栏) */,
 				4EE672402015BCDA00A2234D /* ParallaxHeader */,
 				4EE672412015BCDA00A2234D /* Refresh */,
 				4EE672422015BCDA00A2234D /* SnapKitExtension */,
@@ -121,11 +126,12 @@
 			path = HairPowder;
 			sourceTree = "<group>";
 		};
-		4EE6723F2015BCDA00A2234D /* NoticeBar */ = {
+		4EE6723F2015BCDA00A2234D /* NoticeBar(通知栏) */ = {
 			isa = PBXGroup;
 			children = (
+				4EE6725F2015E55500A2234D /* UNoticeBar.swift */,
 			);
-			path = NoticeBar;
+			path = "NoticeBar(通知栏)";
 			sourceTree = "<group>";
 		};
 		4EE672402015BCDA00A2234D /* ParallaxHeader */ = {
@@ -166,8 +172,8 @@
 		4EE6724E2015BD3C00A2234D /* Procedure(程序) */ = {
 			isa = PBXGroup;
 			children = (
+				4EE6725B2015CD6100A2234D /* Global.swift */,
 				4EE6721D2015B8FC00A2234D /* AppDelegate.swift */,
-				4EE6721F2015B8FC00A2234D /* ViewController.swift */,
 				4EE6724F2015BD3C00A2234D /* Base */,
 				4EE672502015BD3C00A2234D /* Book */,
 				4EE672512015BD3C00A2234D /* Cate */,
@@ -183,6 +189,8 @@
 		4EE6724F2015BD3C00A2234D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				4EE672572015C28100A2234D /* view */,
+				4EE672582015C28100A2234D /* viewController */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -236,9 +244,25 @@
 			path = "Search 2";
 			sourceTree = "<group>";
 		};
+		4EE672572015C28100A2234D /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4EE672582015C28100A2234D /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EE672592015C33E00A2234D /* UTabBarController.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
 		E12FE813660B96DA602A7CB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EE6725E2015DA0E00A2234D /* Alamofire.framework */,
 				542158DAD00D3DE084E4D1C9 /* Pods_U17.framework */,
 			);
 			name = Frameworks;
@@ -363,15 +387,37 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-U17/Pods-U17-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/LLCycleScrollView/LLCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -385,8 +431,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE672202015B8FC00A2234D /* ViewController.swift in Sources */,
 				4EE6721E2015B8FC00A2234D /* AppDelegate.swift in Sources */,
+				4EE6725A2015C33E00A2234D /* UTabBarController.swift in Sources */,
+				4EE6725C2015CD6100A2234D /* Global.swift in Sources */,
+				4EE672602015E55500A2234D /* UNoticeBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

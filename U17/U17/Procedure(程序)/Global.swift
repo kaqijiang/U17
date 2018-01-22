@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+extension String {
+    static let searchHistoryKey = "searchHistoryKey"
+    static let sexTypeKey = "sexTypeKey"
+}

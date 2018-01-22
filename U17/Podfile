@@ -1,4 +1,4 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 use_frameworks!
 inhibit_all_warnings!
@@ -6,7 +6,16 @@ inhibit_all_warnings!
 target 'U17' do
 
 pod 'SnapKit'
+pod 'Then'#语法糖
+pod 'Moya'#网络抽象层
+pod 'HandyJSON', '~> 4.0.0-beta.1'#阿里序列化库
+pod 'Kingfisher'#猫神网络下载和缓存图像
+pod 'Reusable'#阿里视图重用
+pod 'LLCycleScrollView'#轮播图
 pod 'MJRefresh'
 pod 'MBProgressHUD'
+pod 'HMSegmentedControl'#UISegmentedControl的替代品
+pod 'IQKeyboardManagerSwift'#键盘
+pod 'EmptyDataSet-Swift'#空数据源显示内容。
 
 end
